@@ -5,10 +5,10 @@ package testsender;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import Sender.SenderData;
-import Sender.SenderParameters;
-import Sender.SenderService;
-import Sender.SenderServiceImpl;
+import sender.SenderData;
+import sender.SenderParameters;
+import sender.SenderService;
+import sender.SenderServiceImpl;
 
 
 public class TestSenderData {
