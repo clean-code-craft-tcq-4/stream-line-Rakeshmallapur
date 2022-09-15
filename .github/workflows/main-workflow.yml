@@ -22,4 +22,4 @@ jobs:
     - name: Build and Test
       run: mvn -f pom.xml test
     - name: Build and main class
-      run: mvn -f ./pom.xml compile exec:java -Dexec.mainClass="Sender.SenderInput"
+      run: mvn -f ./pom.xml compile exec:java -Dexec.mainClass="sender.SenderInput"
