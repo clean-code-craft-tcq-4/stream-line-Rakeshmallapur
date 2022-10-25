@@ -16,7 +16,7 @@ float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
 int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
 {
   char dummy;
-  int x = scanf("%f%c%f%c%f", temperature, SOC, ChargeRate);
+  int x = scanf("%f%c%f%c%f", temperature, &dummy, SOC, &dummy, ChargeRate);
   
   /*Shifting the elements in the array for Moving Average calculation*/
   for(int i = 0; i<NUMBER_OF_SAMPLES_FOR_SMA-1; i++)
@@ -34,7 +34,7 @@ int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
   return x;
 }
 
-void FindMinAndMax(float data, int size, float* Min, float* Max)
+void FindMinAndMax(float data, float* Min, float* Max)
 {
    if (data < *Min)
    {
