@@ -59,12 +59,20 @@ void testFindSMA()
   
 }
 
+void testPrintMinMaxSMA()
+{
+  int result = PrintMinMaxSMA();
+  assert(result == 1);
+}
+
 int main()
 {
   
   testFindMinAndMax();
   
   testFindSMA();
+  
+  testPrintMinMaxSMA()
   
   ReadConsolePrintMinMaxSMA();
   
