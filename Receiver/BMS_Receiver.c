@@ -13,11 +13,6 @@ float Max_ChargeRate = 0;
 float SMA_ChargeRate = 0;
 float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
 
-void ReadTitle()
-{
-  char title[30];
-  fgets(title,30,stdin);
-}
 
 void ReadParameters(float* temperature, float* SOC, float* ChargeRate)
 {
@@ -89,7 +84,8 @@ int PrintMinMaxSMA()
 void ReadConsolePrintMinMaxSMA()
 {
   float temperature, SOC, ChargeRate;
-  ReadTitle();
+  char title[30];
+  fgets(title,30,stdin);
   for (int i=0; i<50; i++)
   {
     ReadFromConsoleInput(&temperature, &SOC, &ChargeRate);
@@ -97,5 +93,6 @@ void ReadConsolePrintMinMaxSMA()
     FindMinAndMax(SOC, &Min_SOC, &Max_SOC);
     FindMinAndMax(ChargeRate, &Min_ChargeRate, &Max_ChargeRate);
     FindSMA();
+    PrintMinMaxSMA();
   }
 }
