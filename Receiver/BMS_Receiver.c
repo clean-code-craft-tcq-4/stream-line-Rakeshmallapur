@@ -13,10 +13,21 @@ float Max_ChargeRate = 0;
 float SMA_ChargeRate = 0;
 float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA] = {0};
 
-int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
+void ReadTitle()
+{
+  char title[30];
+  fgets(title,30,stdin);
+}
+
+void ReadParameters(float* temperature, float* SOC, float* ChargeRate)
 {
   char dummy;
-  int x = scanf("%f%c%f%c%f", temperature, &dummy, SOC, &dummy, ChargeRate);
+  scanf("%f%c%f%c%f", temperature, &dummy, SOC, &dummy, ChargeRate);
+}
+
+int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
+{
+  ReadParameters(temperature, SOC, ChargeRate);
   
   /*Shifting the elements in the array for Moving Average calculation*/
   for(int i = 0; i<NUMBER_OF_SAMPLES_FOR_SMA-1; i++)
@@ -31,7 +42,7 @@ int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
   SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *SOC;
   ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *ChargeRate;
     
-  return x;
+  return 1;
 }
 
 void FindMinAndMax(float data, float* Min, float* Max)
@@ -78,9 +89,7 @@ int PrintMinMaxSMA()
 void ReadConsolePrintMinMaxSMA()
 {
   float temperature, SOC, ChargeRate;
-  char title[30];
-  fgets(title,30,stdin);
-  puts(title);
+  ReadTitle();
   for (int i=0; i<50; i++)
   {
     ReadFromConsoleInput(&temperature, &SOC, &ChargeRate);
