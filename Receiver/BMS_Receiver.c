@@ -66,6 +66,14 @@ void FindSMA ()
   SMA_ChargeRate = ChargeRate_Sum/NUMBER_OF_SAMPLES_FOR_SMA;
 }
 
+int PrintMinMaxSMA()
+{
+    printf("Temperature: Min = %f, Max = %f, SMA = %f\n", Min_Temp, Max_Temp, SMA_Temp);
+    printf("SOC: Min = %f, Max = %f, SMA = %f\n", Min_SOC, Max_SOC, SMA_SOC);
+    printf("ChargeRate: Min = %f, Max = %f, SMA = %f\n\n", Min_ChargeRate, Max_ChargeRate, SMA_ChargeRate);
+  
+  return 1;
+}
 
 void ReadConsolePrintMinMaxSMA()
 {
@@ -80,8 +88,5 @@ void ReadConsolePrintMinMaxSMA()
     FindMinAndMax(SOC, &Min_SOC, &Max_SOC);
     FindMinAndMax(ChargeRate, &Min_ChargeRate, &Max_ChargeRate);
     FindSMA();
-    printf("Temperature: Min = %f, Max = %f, SMA = %f\n", Min_Temp, Max_Temp, SMA_Temp);
-    printf("SOC: Min = %f, Max = %f, SMA = %f\n", Min_SOC, Max_SOC, SMA_SOC);
-    printf("ChargeRate: Min = %f, Max = %f, SMA = %f\n\n", Min_ChargeRate, Max_ChargeRate, SMA_ChargeRate);
   }
 }
