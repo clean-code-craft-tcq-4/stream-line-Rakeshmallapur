@@ -20,7 +20,7 @@ void ReadParameters(float* temperature, float* SOC, float* ChargeRate)
   scanf("%f%c%f%c%f", temperature, &dummy, SOC, &dummy, ChargeRate);
 }
 
-int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
+void ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
 {
   ReadParameters(temperature, SOC, ChargeRate);
   
@@ -37,7 +37,7 @@ int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate)
   SOC_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *SOC;
   ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA-1] = *ChargeRate;
     
-  return 1;
+  return;
 }
 
 void FindMinAndMax(float data, float* Min, float* Max)
