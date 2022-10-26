@@ -12,7 +12,7 @@ extern float Max_ChargeRate;
 extern float SMA_ChargeRate;
 extern float ChargeRate_Array[NUMBER_OF_SAMPLES_FOR_SMA];
 
-int ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate);
+void ReadFromConsoleInput(float* temperature, float* SOC, float* ChargeRate);
 void FindMinAndMax(float data, float* Min, float* Max);
 void FindSMA ();
 int PrintMinMaxSMA();
