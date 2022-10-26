@@ -12,7 +12,7 @@ int main()
   {
     Temp[i] = i;
     SOC[i] = 1.5*i;
-    ChargeRate[i] = i/BMS_SENDER_BUFFER_SIZE;
+    ChargeRate[i] = (float)i/BMS_SENDER_BUFFER_SIZE;
   }
   for (int i = 0; i < BMS_SENDER_BUFFER_SIZE; i++)
   {
