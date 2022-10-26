@@ -8,7 +8,11 @@ int main()
   char titles[30];
   fgets(titles,30,stdin);
   puts(titles);
-  ReadFromConsoleInput(&temperature, &SOC, &ChargeRate);
+  for (int i=0; i<50; i++)
+  {
+    ReadFromConsoleInput(&temperature, &SOC, &ChargeRate);
+    printf("%f;%f;%f\n",temperature, SOC, ChargeRate);
+  }
   return 0;
   
 }
