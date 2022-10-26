@@ -6,7 +6,7 @@ int main()
 {
   float temperature, SOC, ChargeRate;
   char titles[30];
-  gets(titles);
+  fgets(titles,30,stdin);
   puts(titles);
   ReadFromConsoleInput(&temperature, &SOC, &ChargeRate);
   return 0;
