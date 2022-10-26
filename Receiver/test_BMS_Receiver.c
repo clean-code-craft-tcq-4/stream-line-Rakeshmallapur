@@ -72,7 +72,7 @@ int main()
   
   testFindSMA();
   
-  testPrintMinMaxSMA()
+  testPrintMinMaxSMA();
   
   ReadConsolePrintMinMaxSMA();
   
