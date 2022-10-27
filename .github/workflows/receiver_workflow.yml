@@ -20,7 +20,10 @@ jobs:
     - name: build SenderData
       run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testcheckerSendData ./SendData/*.c
       
-    - name: run
+    - name: run only Sender Data First
+      run: ./testcheckerSendData
+      
+    - name: run Sender and Receiver together
       run: ./testcheckerSendData | ./testcheckerReceiver
 
     - name: collect coverage
