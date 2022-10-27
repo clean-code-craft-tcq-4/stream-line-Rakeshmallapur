@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#define BMS_SENDER_BUFFER_SIZE 60
+#define BMS_SENDER_BUFFER_SIZE 50
 float Temp[50] = {0};
 float SOC[50] = {0};
 float ChargeRate[50] = {0};
