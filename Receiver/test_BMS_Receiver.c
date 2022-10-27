@@ -76,6 +76,8 @@ int main()
   
   ReadConsolePrintMinMaxSMA();
   
+  ReadParameters();
+  
   return 0;
   
 }
