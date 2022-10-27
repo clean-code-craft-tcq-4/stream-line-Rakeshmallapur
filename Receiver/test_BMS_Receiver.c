@@ -65,16 +65,6 @@ void testPrintMinMaxSMA()
   assert(result == 1);
 }
 
-void testReadParameters()
-{
-  char title[30];
-  fgets(title,30,stdin);
-  float* temperature; 
-  float* SOC; 
-  float* ChargeRate;
-  int x = ReadParameters(temperature, SOC, ChargeRate);
-  assert(x==3);
-}
 
 int main()
 {
@@ -86,8 +76,6 @@ int main()
   testPrintMinMaxSMA();
   
   ReadConsolePrintMinMaxSMA();
-  
-  testReadParameters();
   
   return 0;
   
