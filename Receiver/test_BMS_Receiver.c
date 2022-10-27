@@ -67,6 +67,8 @@ void testPrintMinMaxSMA()
 
 void testReadParameters()
 {
+  char title[30];
+  fgets(title,30,stdin);
   float* temperature; 
   float* SOC; 
   float* ChargeRate;
@@ -85,7 +87,7 @@ int main()
   
   ReadConsolePrintMinMaxSMA();
   
-  //testReadParameters();
+  testReadParameters();
   
   return 0;
   
