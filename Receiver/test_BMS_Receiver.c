@@ -65,8 +65,8 @@ void testFindSMA()
     ChargeRate_Array[i] = 0;
   }
   SMA_Temp = 0;
-  SOC_Temp = 0;
-  ChanrgeRate_Temp = 0;  
+  SMA_SOC = 0;
+  SMA_ChanrgeRate = 0;  
 }
 
 void testPrintMinMaxSMA()
