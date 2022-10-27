@@ -85,7 +85,7 @@ int main()
   
   ReadConsolePrintMinMaxSMA();
   
-  testReadParameters();
+  //testReadParameters();
   
   return 0;
   
