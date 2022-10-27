@@ -65,6 +65,15 @@ void testPrintMinMaxSMA()
   assert(result == 1);
 }
 
+void testReadParameters()
+{
+  float* temperature; 
+  float* SOC; 
+  float* ChargeRate;
+  int x = ReadParameters(temperature, SOC, ChargeRate);
+  assert(x==3);
+}
+
 int main()
 {
   
@@ -75,10 +84,8 @@ int main()
   testPrintMinMaxSMA();
   
   ReadConsolePrintMinMaxSMA();
-  float* temperature; 
-  float* SOC; 
-  float* ChargeRate;
-  ReadParameters(temperature, SOC, ChargeRate);
+  
+  testReadParameters();
   
   return 0;
   
