@@ -75,8 +75,10 @@ int main()
   testPrintMinMaxSMA();
   
   ReadConsolePrintMinMaxSMA();
-  
-  ReadParameters();
+  float* temperature; 
+  float* SOC; 
+  float* ChargeRate;
+  ReadParameters(temperature, SOC, ChargeRate);
   
   return 0;
   
